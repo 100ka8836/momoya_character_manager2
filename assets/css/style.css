@@ -1,0 +1,337 @@
+/* グローバルスタイル */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ヘッダー */
+header {
+  background-color: #222222; /* 白地 */
+  color: #333; /* 黒字 */
+  padding: 10px 0; /* 上下の余白のみ */
+  width: 100%; /* ヘッダーを画面幅全体に広げる */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 下に軽い影を追加 */
+  position: relative; /* 要素を標準の位置に配置 */
+}
+
+header nav {
+  max-width: 1200px; /* 中央コンテンツの最大幅 */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 0 20px; /* 左右の余白 */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #ffffff; /* 白字 */
+  background-color: #333; /* 黒地 */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #333; /* 黒字 */
+  background-color: #ffffff; /* 白地 */
+  border: 1px solid #333; /* 黒の縁取り */
+}
+
+/* メインコンテンツ */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* 中央寄せ */
+}
+
+main h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* ボタン */
+button {
+  background-color: white; /* 白地 */
+  color: black; /* 黒字 */
+  border: 2px solid black; /* 黒の縁取り */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: black; /* 黒地 */
+  color: white; /* 白字 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 軽いシャドウ */
+}
+
+/* フォームの中央寄せ */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央寄せ */
+}
+
+/* フォームのフィールド */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* リンク */
+a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #666;
+}
+
+/* メッセージ */
+#message {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* エラーメッセージ */
+#message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* 成功メッセージ */
+#message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* リスト */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  display: block;
+  background-color: #e9e9e9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center; /* リンクを中央寄せ */
+}
+
+ul li a:hover {
+  background-color: #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul li {
+    text-align: center;
+  }
+}
+
+/* ===== 特定ボタン: グループを作成する ===== */
+.create-group-btn {
+  background-color: #000; /* 黒背景 */
+  color: #fff; /* 白文字 */
+  border: 2px solid #000; /* 黒枠 */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.create-group-btn:hover {
+  background-color: #fff; /* ホバー時は白背景 */
+  color: #000; /* 黒文字 */
+  border: 2px solid #000; /* 黒枠 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* シャドウを追加 */
+}
+
+.create-group-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* フォーカス時の効果 */
+}
+
+/* グループ */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.tab-button.active {
+  background-color: #333;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+table th {
+  position: sticky;
+  top: 0;
+  background-color: #666;
+  color: white;
+}
+
+table td:first-child,
+table th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #eee;
+}
+
+/* 左側カラムとその以下のセルのスタイル */
+table td:first-child,
+table th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #666; /* カラムの背景色 */
+  color: white; /* カラムの文字色 */
+  font-weight: bold;
+  text-align: center; /* 水平方向中央揃え */
+  vertical-align: middle; /* 垂直方向中央揃え */
+}
+
+table td:first-child {
+  background-color: #555; /* 左カラム以下のセルの背景色 */
+  color: white; /* 左カラム以下のセルの文字色 */
+  text-align: center; /* 水平方向中央揃え */
+  vertical-align: middle; /* 垂直方向中央揃え */
+}
+
+/* ===== モーダルウィンドウ ===== */
+.modal {
+  display: none; /* 初期は非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 背景を半透明に */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
